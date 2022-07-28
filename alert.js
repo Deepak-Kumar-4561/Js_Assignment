@@ -1140,3 +1140,161 @@
 // // for(const v of a){
 // //     console.log(v.length,v.join())
 // //   }
+
+// // setTimeout(() => console.log("never happens"), 1000);
+// let user = {
+//     firstName: "John",
+//     sayHi() {
+//       console.log(`Hello, ${this.firstName}!`);
+//     }
+//   };
+//   user.sayHi();
+
+
+// let a="abababababbvg";
+// let arr=Array.from(a);
+// for(let i=0;i<arr.length;i++){
+//     if(arr[i]==" "){
+//         arr.splice(i,1);
+//     }
+// }
+// for(let i=0;i<arr.length;i++){
+//     let count=1;
+//     let s = arr.length;
+//     for(let j=i+1;j<s;j++){
+//         if(arr[i]==arr[j]){
+//             count++;
+//             arr.splice(j,1)
+//             j--;
+//         }
+//     }
+//     console.log(`THe character is `+arr[i]+"  have  "+count);
+// }
+
+
+
+// let a = new Array(5,123,4,5);
+// console.log(a.length);
+// let a1 = new Array(5, 4, 3, 2, 1, "testing,jldasflds");
+// console.log(a1.length);
+
+// let b=new Array()
+// console.log(b[0]);
+
+// function user(name ,age,id){
+//     return {
+//     name : name ,
+//     age:age,
+//     id:id
+// }
+// }
+// let a =user("deepak",23,4561);
+
+
+
+
+// let ar=[1,2,,4,5]
+// let res = ar.forEach((Value) => Value*2);
+// console.log(ar);
+// console.log(res);
+
+// for(const v of ar)
+// console.log(v*2);
+
+// let user = (function(name,age,id){
+//     let executed = false
+//     return function(){ if(!executed) {this.name=name;this.age=age;this.id=id;executed=true}};
+// })("Chandresh",45,4562);
+// // let a = new user("deepak",24,4561);
+// let b = new user();
+// console.log(b);
+
+
+//Working with class
+
+// class range{
+//     constructor(from,to){
+//         this.from = from;
+//         this.to = to;
+//     }
+//     includes(n){
+//         return (n<=this.from&&n>=this.to);
+//     }
+//     toString(){
+//         return `(${this.from}...${this.to})`;
+//     };
+// };
+// let user = new range(2,5);
+// console.log(user);
+// console.log(user.toString());
+// console.log(typeof user);
+
+// function f(phrase) {
+//     return class {
+//       sayHi() { console.log(phrase); }
+//     };
+//   }
+  
+// class User extends f("Hello"){}
+// let user = new User;
+// user.sayHi()
+// title = "my group";
+// title = "my group"
+// let group = {
+// title: "Our Group",
+// students: ["John", "Pete", "Alice"],
+
+// showList() {
+//   this.students.forEach(function(student) {
+//     // Error: Cannot read property 'title' of undefined
+//     console.log(this.title + ': ' + student);
+//   });
+// }
+// };
+// group.showList()
+// let User = (name, age)=>{
+//   this.name=name,
+//   this.age=age
+// }
+// let user = new User("deepak",'age');
+// console.log(user);
+
+// function defer(f, ms) {
+//   return function(...args) {
+//     let ctx = this;
+//     console.log(ctx);
+//     console.log(args);
+//     setTimeout(function() {
+//       return f.apply(ctx, args);
+//     }, ms);
+//   };
+// }
+// function sayHi(who) {
+//   console.log('Hello, ' + who);
+// }
+
+// let sayHiDeferred = defer(sayHi, 2000);
+// sayHiDeferred("John");
+
+
+// class User{
+//   static count=0;
+//   constructor(name,id){
+//     this.name=name;
+//     this.id=id;
+//     this.count++;
+//   }
+// }
+// let user1 = new User("Deepak",2341);
+// let user2 = new User("Chandresh",4561);
+// console.log(User.count);
+
+// let  a=(b)=>{
+//   b();
+//   console.log("function a is called");
+// }
+// function b(a){
+//   a();
+//   console.log("function b is called");
+// }
+// a(b);
